@@ -8,7 +8,9 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                
+                    <a class="btn btn-primary" href="{{ route('job') }}">View Jobs</a>
+
                 </div>
             </div>
         </div>
