@@ -10,7 +10,7 @@
                 <div class="panel-body">
                   <a class="btn btn-primary pull-right" href="{{ route('job.new') }}">New Job</a>
                 </div>
-                  
+                <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
                       <th>
@@ -29,24 +29,24 @@
                     <tbody>
                       @foreach($jobs as $job)
                       <tr>
-                        <td>
+                        <td class="col-md-1">
                           {{ $loop->index + 1 }}
                         </td>
-                        <td>
+                        <td class="col-md-2">
                           {{ $job->title }}
                         </td>
-                        <td>
+                        <td class="col-md-8">
                           {{ $job->description }}
                         </td>
                         <td>
-                          {{ $job->created_at->format('H:i m/d/Y') }}
+                          {{ $job->created_at->format('m/d/Y H:i') }}
                         </td>
                       </tr>
                       @endforeach 
                     </tbody>
                     
                   </table>
-
+                </div>
 
                 
             </div>

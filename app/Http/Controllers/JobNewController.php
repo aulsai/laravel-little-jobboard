@@ -37,7 +37,7 @@ class JobNewController extends Controller
         // Auto redirect
         Validator::make($data, [
             'title' => 'required|string|max:150',
-            'description' => 'required|string|max:255'
+            'description' => 'required|string'
         ])->validate();        
 
         $job = new Job;
